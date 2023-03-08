@@ -13,6 +13,16 @@ def encoder(password):
     return password
 
 
+def decoder(password):  # decoder function
+    new_integer = ''  # open "list" but for strings
+    for integer in password:  # for loop to go through the password
+        single_int = ((int(integer)) - 3) % 10
+        # adds three after converting the integer into an integer than uses modulo to isolate the digit
+        single_int = str(single_int)  # converts it back into a string
+        new_integer += single_int  # adds the converted string into the ''
+    return new_integer  # return statement
+
+
 def main():
     # Use while loop for Menu.
     while True:
