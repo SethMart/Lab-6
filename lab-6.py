@@ -5,8 +5,8 @@ def encoder(password):
     res_list = []
     # Use for loop to shift each digit and add to list.
     for password in pass_list:
-        shift_down = (int(password) + 3) % 10
-        res_list.append(shift_down)
+        shift_up = (int(password) + 3) % 10
+        res_list.append(shift_up)
     # Remove list.
     password = ''.join(str(digit) for digit in res_list)
 
